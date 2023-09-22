@@ -8,7 +8,6 @@ import java.util.Date;
 
 @Data
 @Entity
-
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,6 +21,5 @@ public class Employee {
     private String company;
     private Boolean deleted=false;
     private String password;
-
 
 }
