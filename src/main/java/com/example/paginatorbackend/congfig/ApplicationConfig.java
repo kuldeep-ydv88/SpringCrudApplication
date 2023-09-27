@@ -1,5 +1,4 @@
 package com.example.paginatorbackend.congfig;
-
 import com.example.paginatorbackend.Repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

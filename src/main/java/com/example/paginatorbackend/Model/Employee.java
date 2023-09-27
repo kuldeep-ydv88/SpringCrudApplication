@@ -20,6 +20,6 @@ public class Employee {
     private String branch;
     private String company;
     private Boolean deleted=false;
-    private String password;
+
 
 }

@@ -18,11 +18,11 @@ public class AuthenticationController {
 
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(@RequestBody RegisterRequest request){
-        String userEmailAddress = request.getEmail();
-        String subject = "Congratulations on Your Registration";
-        String body = "Thank you for registering with our service";
-        String[] cc = new String[]{"kuldeep@gmail.com"};
-        emailService.sendMail(userEmailAddress,cc,subject,body);
+//        String userEmailAddress = request.getEmail();
+//        String subject = "Congratulations on Your Registration";
+//        String body = "Thank you for registering with our service";
+//        String[] cc = new String[]{"kuldeep@gmail.com"};
+//        emailService.sendMail(userEmailAddress,cc,subject,body);
         return ResponseEntity.ok(service.register(request));
     }
 
@@ -30,6 +30,4 @@ public class AuthenticationController {
     public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest authRequest){
         return ResponseEntity.ok(service.authenticate(authRequest));
    }
-
-
 }
