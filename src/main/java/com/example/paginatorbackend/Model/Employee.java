@@ -6,6 +6,9 @@ import jakarta.persistence.Id;
 import lombok.Data;
 import java.util.Date;
 
+/**
+ * This is Employee Class
+ */
 @Data
 @Entity
 public class Employee {
