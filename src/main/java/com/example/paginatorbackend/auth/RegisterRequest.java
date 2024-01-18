@@ -4,6 +4,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * This is the register class of the user
+ * it contains....
+ */
 @Data
 @Builder
 @NoArgsConstructor
