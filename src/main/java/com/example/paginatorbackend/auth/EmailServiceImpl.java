@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailServiceImpl implements EmailService {
     /**
-     * it Get username value from application properties
+     * it Gets username value from application properties
      * for sending mail to the user
      */
     @Value("${spring.mail.username}")

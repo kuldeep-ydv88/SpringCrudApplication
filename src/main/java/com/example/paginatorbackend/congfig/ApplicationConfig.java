@@ -1,4 +1,5 @@
 package com.example.paginatorbackend.congfig;
+
 import com.example.paginatorbackend.Repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -21,22 +22,22 @@ public class ApplicationConfig {
     private final UserRepository userRepository;
 
     @Bean
-    public UserDetailsService userDetailsService(){
+    public UserDetailsService userDetailsService() {
         return username -> userRepository.findByEmail(username)
-                .orElseThrow(()->new UsernameNotFoundException("user not found"));
+                .orElseThrow(() -> new UsernameNotFoundException("user not found"));
     }
 
-   @Bean
-   public AuthenticationProvider authenticationProvider(){
-       DaoAuthenticationProvider authProvider=  new DaoAuthenticationProvider();
-       authProvider.setUserDetailsService(userDetailsService());
-       authProvider.setPasswordEncoder(passwordEncoder());
-       return authProvider;
-   }
+    @Bean
+    public AuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+        authProvider.setUserDetailsService(userDetailsService());
+        authProvider.setPasswordEncoder(passwordEncoder());
+        return authProvider;
+    }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
-        return  new BCryptPasswordEncoder();
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     @Bean

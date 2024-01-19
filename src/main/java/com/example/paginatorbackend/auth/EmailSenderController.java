@@ -14,7 +14,7 @@ public class EmailSenderController {
     private final EmailService emailService;
 
     @PostMapping("/send")
-    public String sendMail(@RequestParam String to, String[] cc, String subject, String body){
+    public String sendMail(@RequestParam String to, String[] cc, String subject, String body) {
         return emailService.sendMail(to, cc, subject, body);
     }
 

@@ -23,11 +23,12 @@ public class AuthenticationController {
     /**
      * This method handle the user registration
      * it contains the user information
-     * @RequestBody request
+     *
      * @return token
+     * @RequestBody request
      */
     @PostMapping("/register")
-    public ResponseEntity<AuthenticationResponse> register(@RequestBody RegisterRequest request){
+    public ResponseEntity<AuthenticationResponse> register(@RequestBody RegisterRequest request) {
 //        String userEmailAddress = request.getEmail();
 //        String subject = "Congratulations on Your Registration";
 //        String body = "Thank you for registering with our service";
@@ -38,11 +39,12 @@ public class AuthenticationController {
 
     /**
      * This method authenticate the user for login with credentials
+     *
      * @param authRequest
      * @return token
      */
-   @PostMapping("/authenticate")
-    public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest authRequest){
+    @PostMapping("/authenticate")
+    public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest authRequest) {
         return ResponseEntity.ok(service.authenticate(authRequest));
-   }
+    }
 }
