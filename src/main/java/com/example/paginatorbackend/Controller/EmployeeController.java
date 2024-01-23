@@ -73,7 +73,5 @@ public class EmployeeController {
         return Boolean.TRUE;
 
     }
-    public Employee updateDetails(Employee employee){
-        return employee;
-    }
+
 }
