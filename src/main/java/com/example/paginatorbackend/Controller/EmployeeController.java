@@ -22,8 +22,6 @@ public class EmployeeController {
     /**
      * This method add the employee in the Db and it returns Id
      *
-     *
-     *
      * @param employee
      * @return id
      */
@@ -72,8 +70,5 @@ public class EmployeeController {
         log.info("Employee details delete successfully from Db with id :{}", id);
         return Boolean.TRUE;
 
-    }
-    public Employee updateDetails(Employee employee){
-        return employee;
     }
 }
